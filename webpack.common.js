@@ -55,7 +55,9 @@ module.exports = {
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+     analyzerMode: 'disabled',
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {
